@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Mahasiswa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <img src="3arsya.jpg" alt="Foto Mahasiswa" class="profile-photo">
+            <div class="header-info">
+                <h2>Profil Mahasiswa</h2>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="container-top">
+            <nav>
+                <div class="nav-top">
+                    <ul>
+                        <li><a href="#" onclick="showContent('biodata')">Biodata</a></li>
+                        <li><a href="#" onclick="showContent('pendidikan')">Pendidikan</a></li>
+                        <li><a href="#" onclick="showContent('pengalaman')">Pengalaman</a></li>
+                        <li><a href="#" onclick="showContent('keahlian')">Keahlian</a></li>
+                        <li><a href="#" onclick="showContent('publikasi')">Publikasi</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <section>
+                <div class="section-top">
+                    <!-- Konten Biodata -->
+                    <div id="biodata" class="content">
+                        <h2>Biodata</h2>
+                        <p><strong>NIM:</strong> 2023081038</p>
+                        <p><strong>Nama:</strong> Muhammad Arsya Alysyawardhanu</p>
+                        <p><strong>Agama:</strong> Islam</p>
+                        <p><strong>Tanggal Lahir:</strong> 03 November 2005</p>
+                        <p><strong>Tempat Lahir:</strong> Jakarta</p>
+                    </div>
+
+                    <!-- Konten Pendidikan -->
+                    <div id="pendidikan" class="content" style="display: none;">
+                        <h2>Pendidikan</h2>
+                        <p><strong>SD:</strong> Al-Irsyad</p>
+                        <p><strong>SMP:</strong> SMPN 1 Kraksaan</p>
+                        <p><strong>SMA:</strong> SMAN 1 Kraksaan</p>
+                        <p><strong>Universitas:</strong> Universitas Pembangunan Jaya</p>
+                    </div>
+
+                    <div id="pengalaman" class="content" style="display: none;">
+                        <h2>Pengalaman</h2>
+                        <strong>Organisasi:</strong><p>Sinematura</p>
+                        <strong>Divisi:</strong><p>Sutradara dan Cameraman</p>
+                        <strong>Tahun:</strong><p> 2022-2023</p>
+                    </div>
+
+                    <div id="keahlian" class="content" style="display: none;">
+                        <h2>Keahlian</h2>
+                        <strong>Soft skill</strong>
+                        <P>Kerjasama dalam tim</P>
+                        <P>manajemen keuangan</P> 
+                        
+                        <strong>Hard skill</strong>
+                        <p>Videography</p>
+                        <p>Photography</p>
+                        <p>Sutradara</p>
+                    </div>
+
+                    <div id="publikasi" class="content" style="display: none;">
+                        <h2>Publikasi</h2>
+                        <strong>Tentang</strong>
+                        <P>artikel bahasa indonesia terpublish di kompas.com</P>
+                        <p>membuat short movie terpublish di youtube untuk keperluan lomba</p>
+                        <strong>Tahun Pembuatan:</strong><p>2022</p> <p>2023</p>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+
+            <aside class="aside1">
+                <h2>Hobi</h2>
+                <p>Travelling</p>
+                <p>Otomotif</p>
+                <p>Pemrograman</p>
+            </aside>
+        
+    </div>
+
+    <footer>
+        <div class="social-media">
+            <p>Instagram: @arsya_dhanu</p>
+            <p>FB: @farisakbar</p>
+        </div>
+        <p>&copy; Copyright 2024. All Rights Reserved</p>
+        <div class="info">
+            
+            <p>UTS PIBS | Profile Arsya Dhanu</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript langsung dalam HTML -->
+    <script>
+        function showContent(contentId) {
+            // Sembunyikan semua konten terlebih dahulu
+            var contents = document.querySelectorAll('.content');
+            contents.forEach(function(content) {
+                content.style.display = 'none';
+            });
+
+            // Tampilkan konten yang dipilih berdasarkan id
+            var selectedContent = document.getElementById(contentId);
+            selectedContent.style.display = 'block';
+        }
+    </script>
+</body>
+</html>

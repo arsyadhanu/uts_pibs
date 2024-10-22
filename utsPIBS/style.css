@@ -1,0 +1,312 @@
+/* Reset dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #613434;
+    color: white;
+    text-align: center;
+    width: 100%;
+    
+}
+
+.header-info {
+    margin: 20px;
+    font-size: 16px; /* Ukuran teks deskripsi */
+}
+
+.header-container {
+    display: flex; /* Flexbox untuk mengatur foto dan teks berdampingan */
+    align-items: center; /* Vertikal sentralisasi antara foto dan teks */
+    justify-content: left; /* Pusatkan konten di tengah */
+    padding: 10px;
+    max-width: 1200px;
+    margin: 0 auto; /* Memusatkan kontainer di tengah */
+}
+
+.profile-photo {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #4CAF50; /* Border hijau dengan ketebalan 4px */
+    margin-right: 20px; /* Jarak antara foto dan teks */
+}
+
+.container {
+    display: flex;
+    flex-direction: row; /* Susunan horizontal untuk desktop */
+   
+}
+
+.container-top {
+    width: 100%;
+    display: flex;
+}
+
+.container-bottom {
+    width: 100%;
+}
+
+/* Layout default */
+nav {
+    width: 25%; /* Lebar nav pada desktop */
+    border: 5px solid black;
+    background-color: #422727;
+    padding: 25px;
+}
+
+nav ul {
+    list-style: inside;
+    
+}
+
+nav ul li {
+    margin-bottom: 40px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+section {
+    width: 75%; /* Lebar section pada desktop */
+    background-color: #ffffff;
+    padding: 20px;
+    border: 5px solid black;
+}
+
+aside {
+    width: 25%; /* Lebar aside pada desktop */
+    background-color: #422727;
+    padding: 20px;
+    color: #ffffff;
+    border: 5px solid black;
+}
+
+footer {
+    background-color: #072e3d;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer .social-media p, footer .info p {
+    margin-bottom: 5px;
+}
+
+footer .info {
+    text-align: right;
+}
+
+/* Media Queries untuk Responsif */
+
+/* Layout responsif untuk tablet portrait */
+@media (max-width: 1024px) {
+    .header-container {
+        flex-direction: row; /* Mengatur header dalam kolom */
+        text-align: center;
+        
+    }
+
+    .profile-photo {
+       align-items: left;
+    }
+
+    .container {
+        flex-direction: column; /* Semua bagian ditampilkan vertikal */
+        display: flex;
+    }
+
+    .container-top {
+        flex-direction: column;
+    }
+
+    nav ul, aside {
+        display: flex;
+    
+    }
+
+    nav ul li {
+        margin-right: 10px;
+    }
+    
+    aside h2, aside p  {
+        margin-right: 20px;
+
+    }
+
+    nav, section, aside {
+        width: 100%; /* Lebar penuh untuk semua bagian */
+       height: 28vh;
+    }
+
+    footer {
+        flex-direction: row; /* Footer juga menjadi kolom */
+        text-align: center; /* Memusatkan teks footer */
+    }
+}
+
+@media (max-width: 430px) {
+    .header-container {
+        flex-direction: row; /* Mengatur header dalam kolom */
+        text-align: center;
+        
+    }
+
+    .profile-photo {
+       align-items: left;
+    }
+
+    .container {
+        flex-direction: column; /* Semua bagian ditampilkan vertikal */
+        
+    }
+
+    .container-top {
+        flex-direction: column;
+    }
+
+    nav ul, aside {
+        flex-direction: column;
+        font-size: 15px;
+    }
+    
+    aside h2, aside p  {
+        margin-right: 30px;
+        font-size: 15px;
+
+    }
+
+    nav, section, aside {
+        width: 100%; /* Lebar penuh untuk semua bagian */
+       
+    }
+
+    nav ul li {
+       margin-bottom: 7px;
+    }
+
+    footer {
+        flex-direction: row; /* Footer juga menjadi kolom */
+        text-align: center; /* Memusatkan teks footer */
+        font-size: 10px;
+    }
+}
+
+@media (height: 1024px) and (orientation:landscape) {
+    .header-container {
+        flex-direction: row; /* Mengatur header dalam kolom */
+        padding-top: 3vh;
+        
+    }
+
+    header {
+        height: 15vh;
+    }
+
+    .profile-photo {
+       align-items: left;
+       
+    }
+
+   .container {
+    flex-direction: column;
+   }
+
+    
+  
+
+    nav {
+        width: 25%;
+    }
+
+    section {
+        width: 75%;
+    }
+   
+    aside {
+        width: 100%;
+        height: 30vh;
+    }
+
+    footer {
+        flex-direction: row; /* Footer juga menjadi kolom */
+        text-align: center; /* Memusatkan teks footer */
+        height: 17vh;
+    }
+}
+
+
+@media (max-width: 1180px) and (max-height: 820px) and (orientation:landscape) {
+    .header-container {
+        flex-direction: row; /* Mengatur header dalam kolom */
+        text-align: center;
+        
+    }
+
+    .profile-photo {
+       align-items: left;
+    }
+
+   .container {
+    flex-direction: column;
+    
+   }
+
+   .container-top {
+    flex-direction: row;
+    width: 100%;
+   }
+    
+   nav ul li {
+    margin-bottom: 1vh;
+   }
+
+    nav {
+        width: 25%;
+        font-size: 18px;
+    }
+
+    section {
+        width: 75%;
+    }
+   
+    aside {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    nav ul  {
+        flex-direction: column;
+    }
+
+
+  
+   
+
+
+
+
+    footer {
+        flex-direction: row; /* Footer juga menjadi kolom */
+        text-align: center; /* Memusatkan teks footer */
+    }
+}
+
+
+
+
